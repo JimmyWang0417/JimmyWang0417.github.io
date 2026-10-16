@@ -46,6 +46,8 @@ About → Education → Experience → Projects / Open Source → Awards → Lin
 
 ## Password generator 镜像
 
+托管路径仍可用，但**不在个人主页的 Projects / Links 中展示**。
+
 - 本站路径：[`/password-generator/`](./password-generator/)
 - 上游： [zoegea/password-generator](https://github.com/zoegea/password-generator)（Apache-2.0）
 - 参考站：<https://zoegea.github.io/password-generator/>

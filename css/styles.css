@@ -7,7 +7,7 @@
   --accent-soft: rgba(52, 90, 124, 0.12);
   --rule: rgba(26, 29, 33, 0.12);
   --header-h: 3.5rem;
-  --max: 42rem;
+  --max: 60rem;
   --font-display: "Source Serif 4", "Iowan Old Style", "Palatino Linotype", Palatino, serif;
   --font-body: "Source Sans 3", "Segoe UI", Candara, "Gill Sans", sans-serif;
   --ease: 180ms ease;
@@ -243,7 +243,7 @@ code {
 
 .prose {
   margin: 0 0 1.25rem;
-  max-width: 38rem;
+  max-width: 52rem;
 }
 
 .prose.compact {

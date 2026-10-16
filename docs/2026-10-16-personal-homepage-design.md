@@ -40,13 +40,14 @@ Deployment follows the team homepage (`clyzcst.github.io`): **`master` holds sou
 - Prefer internship-variant open-source bullets on the homepage (merged Mooncake / Axolotl / Haystack); do not present unmerged PRs as adopted
 - XJTUToolBox role: Project Collaborator (maintenance, review & PR merge) — not Maintainer
 - Public email on site; internship evaluation included because it appears on the public resume
-- Links: GitHub, ORCID, email, blog, password generator; ORCID also in footer
+- Links: GitHub, ORCID, email, blog; ORCID also in footer
+- Content column: ~60rem (`--max`) so the page uses more of the viewport while staying single-column
 
-## Password generator (added)
+## Password generator (hosted, not featured)
 
-- Feature in Projects and Links
 - Host static mirror at `/password-generator/` from upstream `zoegea/password-generator` (third-party; not a JimmyWang0417 fork)
 - Keep current via `.github/workflows/sync-password-generator.yml` (`schedule` + `workflow_dispatch` + workflow path push)
+- Do not list in homepage Projects or Links
 
 ## Out of scope
 

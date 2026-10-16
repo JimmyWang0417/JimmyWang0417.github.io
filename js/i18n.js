@@ -81,18 +81,6 @@ window.SITE_I18N = {
       "<strong>Cross-platform delivery and testing:</strong> Maintained multi-architecture Windows, macOS, and Linux builds and AUR releases, fixing Linux single-instance and data-path issues. Organized regression tests by domain and generated shards and regression inventories from per-file metadata.",
     xjtuB3:
       "<strong>Maintenance and code review:</strong> Reviewed campus-feature changes and followed fixes for account-switch data leakage, student-profile and fitness-login behavior, empty and zero-value parsing, transaction pagination, and stale asynchronous results.",
-    pwTitle: "Password Generator",
-    pwRole:
-      "Featured tool · local-only deterministic passwords · mirrored on this site",
-    pwDate: "Hosted mirror",
-    pwSummary:
-      "Open-source password generator (Apache-2.0) that derives site-specific passwords from a memory password and a distinguish code entirely in the browser. Hosted at /password-generator/ and kept current from upstream via GitHub Actions.",
-    pwTag2: "Local-only",
-    pwTag3: "GitHub Actions sync",
-    pwB1:
-      '<strong>Try it:</strong> <a href="./password-generator/">jimmywang0417.github.io/password-generator/</a>',
-    pwB2:
-      '<strong>Upstream:</strong> <a href="https://github.com/zoegea/password-generator" rel="noopener noreferrer">zoegea/password-generator</a> · reference site <a href="https://zoegea.github.io/password-generator/" rel="noopener noreferrer">zoegea.github.io/password-generator/</a>',
     awardsTitle: "Awards",
     a1n: "National Olympiad in Informatics in Provinces (NOIP 2021)",
     a1r: "First Prize · Dec 2021",
@@ -124,7 +112,6 @@ window.SITE_I18N = {
     a14r: "Champion · Jun 2026",
     linksTitle: "Links",
     emailLabel: "Email",
-    pwLinkLabel: "Password Gen.",
     footerName: "Junrui Wang",
   },
   zh: {
@@ -205,17 +192,6 @@ window.SITE_I18N = {
       "<strong>跨平台交付与测试：</strong>维护 Windows、macOS、Linux 多架构构建及 AUR 发布，修复 Linux 单实例和数据目录问题；按功能域组织多平台回归，并通过测试文件元数据自动生成分片与历史回归清单。",
     xjtuB3:
       "<strong>维护与代码评审：</strong>评审校园功能改动，跟进账户切换后的数据残留、学籍与体测真实登录、空值和零分解析、流水分页及过期异步任务覆盖等修复。",
-    pwTitle: "密码生成工具",
-    pwRole: "精选工具 · 纯本地确定性密码 · 本站镜像托管",
-    pwDate: "站点镜像",
-    pwSummary:
-      "开源密码生成工具（Apache-2.0）：只需记住记忆密码与区分代码规则，即可在浏览器本地生成各站点密码。镜像托管于 /password-generator/，并由 GitHub Actions 从上游同步更新。",
-    pwTag2: "纯本地计算",
-    pwTag3: "Actions 同步",
-    pwB1:
-      '<strong>试用：</strong> <a href="./password-generator/">jimmywang0417.github.io/password-generator/</a>',
-    pwB2:
-      '<strong>上游：</strong> <a href="https://github.com/zoegea/password-generator" rel="noopener noreferrer">zoegea/password-generator</a> · 参考站 <a href="https://zoegea.github.io/password-generator/" rel="noopener noreferrer">zoegea.github.io/password-generator/</a>',
     awardsTitle: "竞赛与荣誉",
     a1n: "全国青少年信息学奥林匹克联赛（NOIP 2021）",
     a1r: "省级一等奖 · 2021.12",
@@ -247,7 +223,6 @@ window.SITE_I18N = {
     a14r: "冠军 · 2026.06",
     linksTitle: "链接",
     emailLabel: "邮箱",
-    pwLinkLabel: "密码工具",
     footerName: "王君睿",
   },
 };
