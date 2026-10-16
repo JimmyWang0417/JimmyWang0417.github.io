@@ -18,6 +18,7 @@ rsync -a \
   --exclude='.gitignore' \
   --exclude='package.json' \
   --exclude='package-lock.json' \
+  --exclude='assets/avatar.jpg' \
   "$ROOT/" "$PUBLIC/"
 
 # Keep upstream provenance out of the published tree.

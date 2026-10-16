@@ -1,101 +1,114 @@
 (function () {
-  var STORAGE_KEY = "jw-homepage-lang";
-  var dict = window.SITE_I18N || {};
+  const STORAGE_KEY = "homepage-lang";
+  const supported = ["en", "zh"];
+  const titleEn = "Junrui Wang \u00b7 \u738b\u541b\u777f";
+  const titleZh = "\u738b\u541b\u777f \u00b7 Junrui Wang";
 
   function resolveLang() {
-    var params = new URLSearchParams(window.location.search);
-    var fromQuery = params.get("lang");
-    if (fromQuery === "en" || fromQuery === "zh") return fromQuery;
+    const params = new URLSearchParams(window.location.search);
+    const fromQuery = params.get("lang");
+    if (fromQuery && supported.includes(fromQuery)) {
+      return fromQuery;
+    }
     try {
-      var stored = localStorage.getItem(STORAGE_KEY);
-      if (stored === "en" || stored === "zh") return stored;
+      const stored = localStorage.getItem(STORAGE_KEY);
+      if (stored && supported.includes(stored)) {
+        return stored;
+      }
     } catch (_) {
       /* ignore */
     }
     return "en";
   }
 
-  function applyLang(lang) {
-    var strings = dict[lang] || dict.en;
-    if (!strings) return;
+  function applyLang(lang, { fade } = { fade: false }) {
+    const dict = window.SITE_I18N[lang] || window.SITE_I18N.en;
+    const run = () => {
+      document.documentElement.lang = lang === "zh" ? "zh-CN" : "en";
+      document.querySelectorAll("[data-i18n]").forEach((el) => {
+        const key = el.getAttribute("data-i18n");
+        if (!key || !(key in dict)) return;
+        el.innerHTML = dict[key];
+      });
+      document.querySelectorAll(".lang-btn").forEach((btn) => {
+        const active = btn.getAttribute("data-lang") === lang;
+        btn.classList.toggle("is-active", active);
+        btn.setAttribute("aria-pressed", active ? "true" : "false");
+      });
+      document.title = lang === "zh" ? titleZh : titleEn;
+    };
 
-    document.documentElement.lang = lang === "zh" ? "zh-CN" : "en";
-
-    document.querySelectorAll("[data-i18n]").forEach(function (el) {
-      var key = el.getAttribute("data-i18n");
-      if (key && Object.prototype.hasOwnProperty.call(strings, key)) {
-        el.textContent = strings[key];
-      }
-    });
-
-    document.querySelectorAll("[data-i18n-html]").forEach(function (el) {
-      var key = el.getAttribute("data-i18n-html");
-      if (key && Object.prototype.hasOwnProperty.call(strings, key)) {
-        el.innerHTML = strings[key];
-      }
-    });
-
-    document.querySelectorAll(".lang-btn").forEach(function (btn) {
-      var active = btn.getAttribute("data-lang") === lang;
-      btn.classList.toggle("is-active", active);
-      btn.setAttribute("aria-pressed", active ? "true" : "false");
-    });
+    if (fade) {
+      document.body.classList.add("is-fading");
+      window.setTimeout(() => {
+        run();
+        document.body.classList.remove("is-fading");
+      }, 120);
+    } else {
+      run();
+    }
 
     try {
       localStorage.setItem(STORAGE_KEY, lang);
     } catch (_) {
       /* ignore */
     }
-  }
 
-  function setLang(lang) {
-    if (lang !== "en" && lang !== "zh") return;
-    document.body.classList.add("is-fading");
-    window.setTimeout(function () {
-      applyLang(lang);
-      document.body.classList.remove("is-fading");
-    }, 140);
+    const url = new URL(window.location.href);
+    if (lang === "en") {
+      url.searchParams.delete("lang");
+    } else {
+      url.searchParams.set("lang", lang);
+    }
+    window.history.replaceState({}, "", url);
   }
 
   function setupLangSwitch() {
-    document.querySelectorAll(".lang-btn").forEach(function (btn) {
-      btn.addEventListener("click", function () {
-        setLang(btn.getAttribute("data-lang"));
+    document.querySelectorAll(".lang-btn").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const lang = btn.getAttribute("data-lang");
+        if (!supported.includes(lang)) return;
+        applyLang(lang, { fade: true });
       });
     });
   }
 
-  function setupActiveNav() {
-    var sections = Array.prototype.slice.call(
-      document.querySelectorAll("main [data-section]")
-    );
-    var links = Array.prototype.slice.call(
-      document.querySelectorAll(".nav a[href^='#']")
-    );
-    if (!sections.length || !("IntersectionObserver" in window)) return;
+  function setupActiveSection() {
+    const links = Array.from(document.querySelectorAll(".nav a"));
+    const sections = links
+      .map((link) => document.querySelector(link.getAttribute("href")))
+      .filter(Boolean);
 
-    var observer = new IntersectionObserver(
-      function (entries) {
-        entries.forEach(function (entry) {
-          if (!entry.isIntersecting) return;
-          var id = entry.target.id;
-          links.forEach(function (link) {
-            link.classList.toggle(
-              "is-active",
-              link.getAttribute("href") === "#" + id
-            );
-          });
+    if (!("IntersectionObserver" in window) || sections.length === 0) {
+      return;
+    }
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const visible = entries
+          .filter((entry) => entry.isIntersecting)
+          .sort((a, b) => b.intersectionRatio - a.intersectionRatio);
+        if (!visible.length) return;
+        const id = visible[0].target.id;
+        links.forEach((link) => {
+          link.classList.toggle(
+            "is-active",
+            link.getAttribute("href") === `#${id}`
+          );
         });
       },
-      { rootMargin: "-28% 0px -58% 0px", threshold: 0.01 }
+      {
+        rootMargin: "-30% 0px -55% 0px",
+        threshold: [0.1, 0.25, 0.5],
+      }
     );
 
-    sections.forEach(function (section) {
-      observer.observe(section);
-    });
+    sections.forEach((section) => observer.observe(section));
   }
 
-  applyLang(resolveLang());
-  setupLangSwitch();
-  setupActiveNav();
+  document.addEventListener("DOMContentLoaded", () => {
+    applyLang(resolveLang());
+    setupLangSwitch();
+    setupActiveSection();
+  });
 })();
