@@ -1,0 +1,8 @@
+# Local / CI build output (deployed via Pages Artifact, not committed)
+public/
+
+# Editor / OS noise
+.DS_Store
+*.swp
+.idea/
+.vscode/

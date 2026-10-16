@@ -1,0 +1,10 @@
+{
+  "name": "jimmywang0417.github.io",
+  "private": true,
+  "description": "Personal homepage source; deployable tree is built into public/",
+  "scripts": {
+    "clean": "rm -rf public",
+    "build": "bash scripts/build.sh",
+    "preview": "bash scripts/build.sh && python3 -m http.server --directory public 8080"
+  }
+}
