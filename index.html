@@ -15,20 +15,10 @@
 <body>
   <a class="skip-link" href="#main" data-i18n="skip">Skip to content</a>
 
-  <header class="site-header" id="top">
-    <div class="header-inner">
-      <a class="brand" href="#about" aria-label="Junrui Wang">
-        <span class="mark" aria-hidden="true">JW</span>
-        <span class="brand-name" data-i18n="brandName">Junrui Wang</span>
-      </a>
-      <nav class="nav" aria-label="Primary">
-        <a href="#about" data-i18n="navAbout">About</a>
-        <a href="#education" data-i18n="navEducation">Education</a>
-        <a href="#experience" data-i18n="navExperience">Experience</a>
-        <a href="#projects" data-i18n="navProjects">Projects</a>
-        <a href="#awards" data-i18n="navAwards">Awards</a>
-        <a href="#links" data-i18n="navLinks">Links</a>
-      </nav>
+  
+  <header class="site-top">
+    <div class="site-top-inner">
+      <a class="top-brand" href="#about" data-i18n="brandName">Junrui Wang</a>
       <div class="lang-switch" role="group" aria-label="Language">
         <button type="button" class="lang-btn is-active" data-lang="en" aria-pressed="true">EN</button>
         <span class="lang-sep" aria-hidden="true">|</span>
@@ -37,177 +27,247 @@
     </div>
   </header>
 
-  <main id="main" class="page">
-    <section class="section hero" id="about" data-section="about">
-      <p class="eyebrow" data-i18n="aboutEyebrow">About</p>
-      <h1 class="display-name" data-i18n="displayName">Junrui Wang</h1>
-      <p class="lede" data-i18n="affiliation">Xi'an Jiaotong University · School of Electronics and Information Technology · Expected Jun 2028</p>
-      <p class="prose" data-i18n="aboutBody">Undergraduate in Software Engineering. Interested in code-agent execution and independent verification, LLM inference systems, and evaluation reliability; also building around AI infrastructure and LLM engineering through internships and open-source work.</p>
-      <ul class="contact-row" aria-label="Contact">
-        <li><a href="mailto:jimmywang0417@gmail.com">jimmywang0417@gmail.com</a></li>
-        <li><a href="https://github.com/JimmyWang0417" rel="noopener noreferrer">GitHub</a></li>
-        <li><a href="https://orcid.org/0009-0001-0045-8623" rel="noopener noreferrer">ORCID</a></li>
-        <li><a href="https://www.cnblogs.com/wangjunrui" rel="noopener noreferrer" data-i18n="blogLabel">Blog</a></li>
-      </ul>
-    </section>
-
-    <section class="section" id="education" data-section="education">
-      <h2 data-i18n="educationTitle">Education</h2>
-      <article class="entry">
-        <div class="entry-head">
-          <div>
-            <h3 data-i18n="eduSchool">Xi'an Jiaotong University</h3>
-            <p class="meta" data-i18n="eduProgram">B.Eng. in Software Engineering · School of Electronics and Information Technology</p>
-          </div>
-          <p class="date" data-i18n="eduDate">Sep 2024 — Jun 2028</p>
+  <div class="layout">
+        <aside class="sidebar" aria-label="Site">
+      <div class="sidebar-sticky">
+        <div class="profile">
+          <a class="mark-link" href="#about" aria-label="Junrui Wang">
+            <img class="avatar" src="assets/avatar.jpg" width="160" height="160" alt="Junrui Wang">
+          </a>
+          <h1 class="profile-name" data-i18n="displayName">Junrui Wang</h1>
+          <p class="profile-role" data-i18n="profileRole">B.Eng. in Software Engineering</p>
+          <p class="profile-school" data-i18n="profileSchool">Xi'an Jiaotong University</p>
         </div>
-        <ul class="facts">
-          <li><span data-i18n="eduAvgLabel">Weighted average</span> <strong>90.9854</strong></li>
-          <li><span data-i18n="eduRankLabel">Rank</span> <strong data-i18n="eduRank">6/136 (Top 5%)</strong></li>
+        <ul class="sidebar-contact" aria-label="Contact">
+          <li><a class="contact-chip" href="mailto:jimmywang0417@gmail.com"><span aria-hidden="true">✉️</span> <span data-i18n="emailLabel">Email</span></a></li>
+          <li><a class="contact-chip" href="https://github.com/JimmyWang0417" rel="noopener noreferrer"><span aria-hidden="true">💻</span> GitHub</a></li>
+          <li><a class="contact-chip" href="https://www.cnblogs.com/wangjunrui" rel="noopener noreferrer"><span aria-hidden="true">📝</span> <span data-i18n="blogLabel">Blog</span></a></li>
         </ul>
-        <p class="prose compact" data-i18n="eduCourses">Selected coursework (/100): Programming Fundamentals 97 · Digital Logic and Digital Systems 98 · Operating Systems 92 · Database Systems 96 · Linear Algebra and Analytic Geometry 96 · Fundamentals of Discrete Mathematics 92 · Graph Theory and Algebraic Systems 99 · Probability and Mathematical Statistics 98 · Complex Variables and Integral Transforms 100 · Mathematical Modeling 95</p>
-        <h4 class="subhead" data-i18n="campusTitle">Campus involvement</h4>
-        <ul class="plain-list">
-          <li><span data-i18n="campus1">Jiang Zhuangde Scholarship</span> <span class="muted" data-i18n="campus1Date">Mar 2026</span></li>
-          <li><span data-i18n="campus2">Outstanding Student</span> <span class="muted" data-i18n="campus2Date">Nov 2025</span></li>
-          <li><span data-i18n="campus3">Member · XJTU Algorithm Competition Association</span> <span class="muted" data-i18n="campus3Date">Sep 2024 — Present</span></li>
-          <li><span data-i18n="campus4">OPPO "Benfen" Scholarship</span> <span class="muted" data-i18n="campus4Date">May 2026</span></li>
-        </ul>
-      </article>
-    </section>
-
-    <section class="section" id="experience" data-section="experience">
-      <h2 data-i18n="experienceTitle">Experience</h2>
-      <article class="entry">
-        <div class="entry-head">
-          <div>
-            <h3 data-i18n="huaweiCompany">Huawei</h3>
-            <p class="meta">
-              <span data-i18n="huaweiRole">AI Infra Intern</span>
-              <span class="eval"> · <span data-i18n="huaweiEvalLabel">Internship evaluation:</span> <strong data-i18n="huaweiEval">Excellent</strong></span>
-            </p>
-            <p class="meta muted" data-i18n="huaweiOrg">2012 Lab · Basic Software Institute · Compiler &amp; Programming Languages Department · Language VM Lab</p>
-          </div>
-          <p class="date" data-i18n="huaweiDate">Jul 15, 2026 — Aug 31, 2026</p>
+        <div class="interest-block">
+          <h3 class="interest-heading" data-i18n="interestHeading">Focus</h3>
+          <ul class="interest-chips">
+            <li data-i18n="chip1">AI Infra</li>
+            <li data-i18n="chip2">LLM Systems</li>
+            <li data-i18n="chip3">Competitive Programming</li>
+            <li data-i18n="chip4">Open Source</li>
+            <li data-i18n="chip5">Coding Agents</li>
+          </ul>
         </div>
-        <p class="project-title" data-i18n="huaweiProject">CPF-KMP · Knowledge-Driven Domain Expert Agent</p>
-        <ul class="tags" aria-label="Topics">
-          <li>Kotlin/Native</li>
-          <li>Compose / OHOS</li>
-          <li data-i18n="huaweiTag3">Agent Coordination</li>
-        </ul>
-        <ul class="bullets">
-          <li data-i18n="huaweiB1"><strong>Technical references:</strong> Organized Kotlin/Native memory management, interoperability, Compose rendering, and OHOS references with operating steps and checks. Fixed a read-only version and logged the material read by implementers and reviewers.</li>
-          <li data-i18n="huaweiB2"><strong>Execution and review:</strong> Connected task assignment (Supervisor), code edits, independent review, and result collection (Integrator); limited editable files per subtask. Updated rules, validators, and regression tests for code versions, different reviewer identities, and build/test exit codes; stopped delivery on missing records or unresolved review findings.</li>
-          <li data-i18n="huaweiB3"><strong>WebUI state fixes:</strong> Displayed dynamic task graphs, agent states, diffs, and checksums with event streaming and reload recovery. Fixed child agents remaining paused after their parent task completed so the UI reflected actual execution results.</li>
-          <li data-i18n="huaweiB4"><strong>API migration:</strong> Replaced one deprecated API in each of a Compose repository's rendering-context and gesture-scrolling modules. Edited each module separately, ran local builds and tests, had another agent review the same code version, and saved the changes, test results, and review records.</li>
-        </ul>
-      </article>
-    </section>
+        <nav class="nav" aria-label="Primary">
+          <a href="#about"><span class="nav-ico" aria-hidden="true">👋</span><span data-i18n="navAbout">About</span></a>
+          <a href="#education"><span class="nav-ico" aria-hidden="true">🎓</span><span data-i18n="navEducation">Education</span></a>
+          <a href="#experience"><span class="nav-ico" aria-hidden="true">💼</span><span data-i18n="navExperience">Experience</span></a>
+          <a href="#projects"><span class="nav-ico" aria-hidden="true">🛠️</span><span data-i18n="navProjects">Projects</span></a>
+          <a href="#awards"><span class="nav-ico" aria-hidden="true">🏆</span><span data-i18n="navAwards">Awards</span></a>
+          <a href="#links"><span class="nav-ico" aria-hidden="true">🔗</span><span data-i18n="navLinks">Links</span></a>
+        </nav>
+      </div>
+    </aside>
 
-    <section class="section" id="projects" data-section="projects">
-      <h2 data-i18n="projectsTitle">Projects / Open Source</h2>
-      <p class="metrics-note" data-i18n="metricsNote">GitHub project-level stars / forks · as of Oct 8, 2026</p>
+    <div class="main-column">
+      <main id="main" class="page">
+        <section class="section hero" id="about" data-section="about">
+          <figure class="hero-banner">
+            <img src="assets/banner.svg" width="1200" height="360" alt="Junrui Wang — Algorithms, systems, and useful tools">
+          </figure>
+          <p class="eyebrow"><span aria-hidden="true">👋</span> <span data-i18n="aboutEyebrow">About</span></p>
+          <p class="lede" data-i18n="affiliation">Xi'an Jiaotong University · School of Electronics and Information Technology · Expected Jun 2028</p>
+          <p class="prose" data-i18n="aboutBody">Undergraduate in Software Engineering at XJTU. I enjoy turning hard algorithmic ideas into concise, reusable code—and spend most days around competitive programming, AI Infra / LLM systems, coding agents, and open-source correctness work.</p>
 
-      <article class="entry">
-        <div class="entry-head">
-          <div>
-            <h3 data-i18n="osTitle">LLM Infrastructure Open-source Contributions</h3>
-            <p class="meta" data-i18n="osRole">Open-source Contributor · C++ / Python</p>
-          </div>
-          <p class="date" data-i18n="osDate">Aug 2026 — Present</p>
-        </div>
-        <p class="prose compact" data-i18n="osSummary">Contributed correctness fixes and configuration features to LLM infrastructure.</p>
-        <ul class="tags">
-          <li data-i18n="osTag1">Correctness</li>
-          <li>FP8</li>
-          <li data-i18n="osTag3">Preprocessing</li>
-        </ul>
-        <ul class="bullets">
-          <li data-i18n="osB1"><strong>Mooncake</strong> <span class="metric">6,730★ / 1,295 forks</span> <strong>— metrics and configuration:</strong> Fixed hybrid-histogram serialization that duplicated buckets or cleared existing metrics; preserved parameter names after <code>RequiredParam</code> copies so errors identify the setting.</li>
-          <li data-i18n="osB2"><strong>Axolotl</strong> <span class="metric">12,536★ / 1,452 forks</span> <strong>— FP8 configuration:</strong> Exposed 3 scaling recipes (<code>tensorwise</code>, <code>rowwise</code>, <code>rowwise_with_gw_hp</code>) while retaining validation for incompatible FSDP combinations.</li>
-          <li data-i18n="osB3"><strong>Haystack</strong> <span class="metric">26,694★ / 3,254 forks</span> <strong>— document preprocessing:</strong> Added optional minimum-content filtering after cleaning, preserving default and non-text behavior; supplied validation, boundary tests, documentation, and a release note.</li>
-          <li data-i18n="osB4"><strong>verl</strong> <span class="metric">23,782★ / 4,717 forks</span> <strong>— math reward correctness:</strong> Fixed timeout-decorator misuse that marked equivalent PRIME answers incorrect; removed redundant truncation in math-DAPO that dropped the opening <code>boxed</code> marker from long answers. Added CPU regressions for symbolic and numerical equivalence, timeout fallback, and answer-length boundaries.</li>
-        </ul>
-      </article>
+          <ul class="highlights" aria-label="Highlights">
+            <li><span aria-hidden="true">🎓</span> <span data-i18n="hl1">Software Engineering at XJTU</span></li>
+            <li><span aria-hidden="true">🧩</span> <span data-i18n="hl2">Competitive programmer &amp; algorithm enthusiast</span></li>
+            <li><span aria-hidden="true">🛠️</span> <span data-i18n="hl3">Building with C++, Python, and JavaScript</span></li>
+            <li><span aria-hidden="true">🤖</span> <span data-i18n="hl4">Coding agents: Codex &amp; Claude Code</span></li>
+            <li><span aria-hidden="true">🐧</span> <span data-i18n="hl5">Daily Linux user</span></li>
+            <li><span aria-hidden="true">⚡</span> <span data-i18n="hl6">Minecraft redstone enjoyer</span></li>
+          </ul>
 
-      <article class="entry">
-        <div class="entry-head">
-          <div>
-            <h3>
-              <a href="https://github.com/yan-xiaoo/XJTUToolBox" rel="noopener noreferrer">XJTUToolBox</a>
-              <span class="metric">204★ / 17 forks</span>
-            </h3>
-            <p class="meta" data-i18n="xjtuRole">Project Collaborator (Maintenance, Review &amp; PR Merge) · Python / PyQt5 · Cross-platform Desktop App</p>
-          </div>
-          <p class="date" data-i18n="xjtuDate">Jan 2026 — Present</p>
-        </div>
-        <p class="prose compact" data-i18n="xjtuSummary">Cross-platform desktop app for campus information and multi-model chat.</p>
-        <ul class="tags">
-          <li data-i18n="xjtuTag1">Model APIs</li>
-          <li data-i18n="xjtuTag2">Campus Data</li>
-          <li data-i18n="xjtuTag3">Cross-platform Builds</li>
-        </ul>
-        <ul class="bullets">
-          <li data-i18n="xjtuB1"><strong>Model APIs and campus data:</strong> Built the "问舟" multi-session assistant with adapters for OpenAI, Anthropic, Gemini, Ollama, and compatible endpoints plus Markdown and code rendering. Replaced hard-coded notices with declarative HTML, XPath, RSS, and JSON sources; a failed source does not stop the others.</li>
-          <li data-i18n="xjtuB2"><strong>Cross-platform delivery and testing:</strong> Maintained multi-architecture Windows, macOS, and Linux builds and AUR releases, fixing Linux single-instance and data-path issues. Organized regression tests by domain and generated shards and regression inventories from per-file metadata.</li>
-          <li data-i18n="xjtuB3"><strong>Maintenance and code review:</strong> Reviewed campus-feature changes and followed fixes for account-switch data leakage, student-profile and fitness-login behavior, empty and zero-value parsing, transaction pagination, and stale asynchronous results.</li>
-        </ul>
-      </article>
-    </section>
+          <h2 class="skills-heading"><span aria-hidden="true">🧰</span> <span data-i18n="skillsTitle">Toolkit &amp; interests</span></h2>
+          <ul class="skills-grid" aria-label="Toolkit">
+            <li><span class="skill-emoji" aria-hidden="true">⚙️</span><strong>C++</strong><span data-i18n="skCpp">algorithms &amp; systems</span></li>
+            <li><span class="skill-emoji" aria-hidden="true">🐍</span><strong>Python</strong><span data-i18n="skPy">automation &amp; tooling</span></li>
+            <li><span class="skill-emoji" aria-hidden="true">🟨</span><strong>JavaScript</strong><span data-i18n="skJs">web &amp; dashboards</span></li>
+            <li><span class="skill-emoji" aria-hidden="true">🐧</span><strong>Linux</strong><span data-i18n="skLinux">daily environment</span></li>
+            <li><span class="skill-emoji" aria-hidden="true">🏁</span><strong data-i18n="skCpTitle">Competitive Programming</strong><span data-i18n="skCp">contests &amp; templates</span></li>
+            <li><span class="skill-emoji" aria-hidden="true">🤖</span><strong>Codex</strong><span data-i18n="skCodex">primary coding agent</span></li>
+            <li><span class="skill-emoji" aria-hidden="true">✨</span><strong>Claude Code</strong><span data-i18n="skClaude">coding agent</span></li>
+            <li><span class="skill-emoji" aria-hidden="true">📦</span><strong>Git</strong><span data-i18n="skGit">version control</span></li>
+            <li>
+              <img class="skill-icon" src="assets/icons/minecraft.svg" width="28" height="28" alt="">
+              <strong>Minecraft</strong><span data-i18n="skMc">redstone &amp; building</span>
+            </li>
+            <li><span class="skill-emoji" aria-hidden="true">🏗️</span><strong>AI Infra</strong><span data-i18n="skAi">LLM systems &amp; agents</span></li>
+          </ul>
 
-    <section class="section" id="awards" data-section="awards">
-      <h2 data-i18n="awardsTitle">Awards</h2>
-      <ul class="awards-list">
-        <li><span class="award-name" data-i18n="a1n">National Olympiad in Informatics in Provinces (NOIP 2021)</span><span class="award-result" data-i18n="a1r">First Prize · Dec 2021</span></li>
-        <li><span class="award-name" data-i18n="a2n">National Olympiad in Informatics in Provinces (NOIP 2022)</span><span class="award-result" data-i18n="a2r">First Prize · Nov 2022</span></li>
-        <li><span class="award-name" data-i18n="a3n">ICPC Nanjing Regional 2024</span><span class="award-result" data-i18n="a3r">Bronze Medal · Nov 2024</span></li>
-        <li><span class="award-name" data-i18n="a4n">China Collegiate Programming Contest (CCPC), Zhengzhou 2024</span><span class="award-result" data-i18n="a4r">Silver Medal · Nov 2024</span></li>
-        <li><span class="award-name" data-i18n="a5n">ICPC China Hubei (Wuhan) Invitational 2025</span><span class="award-result" data-i18n="a5r">Silver Medal · Apr 2025</span></li>
-        <li><span class="award-name" data-i18n="a6n">CCF Collegiate Computer Systems &amp; Programming Contest (CCSP 2025)</span><span class="award-result" data-i18n="a6r">Silver Medal · Oct 2025</span></li>
-        <li><span class="award-name" data-i18n="a7n">ICPC Wuhan Regional 2025</span><span class="award-result" data-i18n="a7r">Silver Medal · Nov 2025</span></li>
-        <li><span class="award-name" data-i18n="a8n">ICPC Shanghai Regional 2025</span><span class="award-result" data-i18n="a8r">Silver Medal · Nov 2025</span></li>
-        <li><span class="award-name" data-i18n="a9n">China Collegiate Programming Contest (CCPC), Chongqing 2025</span><span class="award-result" data-i18n="a9r">Silver Medal · Nov 2025</span></li>
-        <li><span class="award-name" data-i18n="a10n">Baidu Star Programming Contest Finals 2025</span><span class="award-result" data-i18n="a10r">Gold Award · Dec 2025</span></li>
-        <li><span class="award-name" data-i18n="a11n">Group Programming Ladder Tournament (GPLT) 2026</span><span class="award-result" data-i18n="a11r">Individual First Prize · May 2026</span></li>
-        <li><span class="award-name" data-i18n="a12n">Ascend AI Operator Challenge, 2nd Annual Championship</span><span class="award-result" data-i18n="a12r">13th Place · May 2026</span></li>
-        <li><span class="award-name" data-i18n="a13n">Lanqiao Cup National Finals · C/C++ University Group A</span><span class="award-result" data-i18n="a13r">First Prize · Jun 2026</span></li>
-        <li><span class="award-name" data-i18n="a14n">Chuanzhi Cup National Programming Challenge · Group A</span><span class="award-result" data-i18n="a14r">Champion · Jun 2026</span></li>
-      </ul>
-    </section>
+                              <ul class="contact-row" aria-label="Contact">
+            <li><a href="mailto:jimmywang0417@gmail.com"><span aria-hidden="true">✉️</span> <span data-i18n="emailLabel">Email</span></a></li>
+            <li><a href="https://github.com/JimmyWang0417" rel="noopener noreferrer"><span aria-hidden="true">💻</span> GitHub</a></li>
+            <li><a href="https://www.cnblogs.com/wangjunrui" rel="noopener noreferrer"><span aria-hidden="true">📝</span> <span data-i18n="blogLabel">Blog</span></a></li>
+          </ul>
+        </section>
 
-    <section class="section" id="links" data-section="links">
-      <h2 data-i18n="linksTitle">Links</h2>
-      <ul class="link-list">
-        <li>
-          <span class="link-label">GitHub</span>
-          <a href="https://github.com/JimmyWang0417" rel="noopener noreferrer">github.com/JimmyWang0417</a>
-        </li>
-        <li>
-          <span class="link-label">ORCID</span>
-          <a href="https://orcid.org/0009-0001-0045-8623" rel="noopener noreferrer">orcid.org/0009-0001-0045-8623</a>
-        </li>
-        <li>
-          <span class="link-label" data-i18n="emailLabel">Email</span>
-          <a href="mailto:jimmywang0417@gmail.com">jimmywang0417@gmail.com</a>
-        </li>
-        <li>
-          <span class="link-label" data-i18n="blogLabel">Blog</span>
-          <a href="https://www.cnblogs.com/wangjunrui" rel="noopener noreferrer">cnblogs.com/wangjunrui</a>
-        </li>
-      </ul>
-    </section>
-  </main>
+        <section class="section" id="education" data-section="education">
+          <h2><span aria-hidden="true">🎓</span> <span data-i18n="educationTitle">Education</span></h2>
+          <article class="entry">
+            <div class="entry-head">
+              <div>
+                <h3 data-i18n="eduSchool">Xi'an Jiaotong University</h3>
+                <p class="meta" data-i18n="eduProgram">B.Eng. in Software Engineering · School of Electronics and Information Technology</p>
+              </div>
+              <p class="date" data-i18n="eduDate">Sep 2024 — Jun 2028</p>
+            </div>
+            <ul class="facts">
+              <li><span aria-hidden="true">📊</span> <span data-i18n="eduAvgLabel">Weighted average</span> <strong>90.9854</strong></li>
+              <li><span aria-hidden="true">🏅</span> <span data-i18n="eduRankLabel">Rank</span> <strong data-i18n="eduRank">6/136 (Top 5%)</strong></li>
+            </ul>
+            <p class="prose compact" data-i18n="eduCourses">Selected coursework (/100): Programming Fundamentals 97 · Digital Logic and Digital Systems 98 · Operating Systems 92 · Database Systems 96 · Linear Algebra and Analytic Geometry 96 · Fundamentals of Discrete Mathematics 92 · Graph Theory and Algebraic Systems 99 · Probability and Mathematical Statistics 98 · Complex Variables and Integral Transforms 100 · Mathematical Modeling 95</p>
+            <h4 class="subhead"><span aria-hidden="true">🏫</span> <span data-i18n="campusTitle">Campus involvement</span></h4>
+            <ul class="plain-list">
+              <li><span data-i18n="campus1">Jiang Zhuangde Scholarship</span> <span class="muted" data-i18n="campus1Date">Mar 2026</span></li>
+              <li><span data-i18n="campus2">Outstanding Student</span> <span class="muted" data-i18n="campus2Date">Nov 2025</span></li>
+              <li><span data-i18n="campus3">Member · XJTU Algorithm Competition Association</span> <span class="muted" data-i18n="campus3Date">Sep 2024 — Present</span></li>
+              <li><span data-i18n="campus4">OPPO "Benfen" Scholarship</span> <span class="muted" data-i18n="campus4Date">May 2026</span></li>
+            </ul>
+          </article>
+        </section>
 
-  <footer class="site-footer">
-    <p>
-      <span data-i18n="footerName">Junrui Wang</span>
-      ·
-      <a href="https://orcid.org/0009-0001-0045-8623" rel="noopener noreferrer">ORCID 0009-0001-0045-8623</a>
-      ·
-      <a href="mailto:jimmywang0417@gmail.com">jimmywang0417@gmail.com</a>
-    </p>
-  </footer>
+        <section class="section" id="experience" data-section="experience">
+          <h2><span aria-hidden="true">💼</span> <span data-i18n="experienceTitle">Experience</span></h2>
+          <article class="entry">
+            <div class="entry-head">
+              <div>
+                <h3 data-i18n="huaweiCompany">Huawei</h3>
+                <p class="meta">
+                  <span data-i18n="huaweiRole">AI Infra Intern</span>
+                  <span class="eval"> · <span data-i18n="huaweiEvalLabel">Internship evaluation:</span> <strong data-i18n="huaweiEval">Excellent</strong></span>
+                </p>
+                <p class="meta muted" data-i18n="huaweiOrg">2012 Lab · Basic Software Institute · Compiler &amp; Programming Languages Department · Language VM Lab</p>
+              </div>
+              <p class="date" data-i18n="huaweiDate">Jul 15, 2026 — Aug 31, 2026</p>
+            </div>
+            <p class="project-title"><span aria-hidden="true">🚀</span> <span data-i18n="huaweiProject">CPF-KMP · Knowledge-Driven Domain Expert Agent</span></p>
+            <ul class="tags" aria-label="Topics">
+              <li>Kotlin/Native</li>
+              <li>Compose / OHOS</li>
+              <li data-i18n="huaweiTag3">Agent Coordination</li>
+            </ul>
+            <p class="prose compact" data-i18n="huaweiStackNote">Project stack already wired Claude and Codex through ACP for agent execution (existing capability in the internship materials—not a claim of sole ownership).</p>
+            <ul class="bullets">
+              <li data-i18n-html="huaweiB1"><strong>Technical references:</strong> Organized Kotlin/Native memory management, interoperability, Compose rendering, and OHOS references with operating steps and checks. Fixed a read-only version and logged the material read by implementers and reviewers.</li>
+              <li data-i18n-html="huaweiB2"><strong>Execution and review:</strong> Connected task assignment (Supervisor), code edits, independent review, and result collection (Integrator); limited editable files per subtask. Updated rules, validators, and regression tests for code versions, different reviewer identities, and build/test exit codes; stopped delivery on missing records or unresolved review findings.</li>
+              <li data-i18n-html="huaweiB3"><strong>WebUI state fixes:</strong> Displayed dynamic task graphs, agent states, diffs, and checksums with event streaming and reload recovery. Fixed child agents remaining paused after their parent task completed so the UI reflected actual execution results.</li>
+              <li data-i18n-html="huaweiB4"><strong>API migration:</strong> Replaced one deprecated API in each of a Compose repository's rendering-context and gesture-scrolling modules. Edited each module separately, ran local builds and tests, had another agent review the same code version, and saved the changes, test results, and review records.</li>
+            </ul>
+          </article>
+        </section>
+
+        <section class="section" id="projects" data-section="projects">
+          <h2><span aria-hidden="true">🛠️</span> <span data-i18n="projectsTitle">Projects / Open Source</span></h2>
+          <p class="metrics-note" data-i18n="metricsNote">GitHub project-level stars / forks · as of Oct 16, 2026</p>
+          <p class="metrics-note" data-i18n="contribNote">Tracked upstream PRs authored by me (campus + AI/LLM, snapshot Oct 7, 2026): 28 authored · 14 merged · 10 open · 4 closed without merge.</p>
+
+          <article class="entry">
+            <div class="entry-head">
+              <div>
+                <h3><span aria-hidden="true">🧠</span> <span data-i18n="osTitle">LLM Infrastructure Open-source Contributions</span></h3>
+                <p class="meta" data-i18n="osRole">Open-source Contributor · C++ / Python</p>
+              </div>
+              <p class="date" data-i18n="osDate">Aug 2026 — Present</p>
+            </div>
+            <p class="prose compact" data-i18n="osSummary">Contributed correctness fixes and configuration features to LLM infrastructure.</p>
+            <ul class="tags">
+              <li data-i18n="osTag1">Correctness</li>
+              <li>FP8</li>
+              <li data-i18n="osTag3">Preprocessing</li>
+            </ul>
+            <ul class="bullets">
+              <li data-i18n-html="osB1"><strong>Mooncake</strong> <span class="metric">6,812★ / 1,343 forks</span> <strong>— metrics and configuration:</strong> Fixed hybrid-histogram serialization that duplicated buckets or cleared existing metrics; preserved parameter names after <code>RequiredParam</code> copies so errors identify the setting.</li>
+              <li data-i18n-html="osB2"><strong>Axolotl</strong> <span class="metric">12,575★ / 1,474 forks</span> <strong>— FP8 configuration:</strong> Exposed 3 scaling recipes (<code>tensorwise</code>, <code>rowwise</code>, <code>rowwise_with_gw_hp</code>) while retaining validation for incompatible FSDP combinations.</li>
+              <li data-i18n-html="osB3"><strong>Haystack</strong> <span class="metric">26,746★ / 3,293 forks</span> <strong>— document preprocessing:</strong> Added optional minimum-content filtering after cleaning, preserving default and non-text behavior; supplied validation, boundary tests, documentation, and a release note.</li>
+              <li data-i18n-html="osB4"><strong>LMDeploy</strong> <span class="metric">8,108★ / 768 forks</span> <strong>— Markdown link validation:</strong> Validated cross-file Markdown link targets so broken documentation references fail checks instead of shipping silently.</li>
+              <li data-i18n-html="osB5"><strong>Open Instruct</strong> <span class="metric">3,900★ / 596 forks</span> <strong>— Beaker download timeout:</strong> Increased Beaker CLI download timeout so long-running dataset fetches are less likely to abort mid-transfer.</li>
+            </ul>
+          </article>
+
+          <article class="entry">
+            <div class="entry-head">
+              <div>
+                <h3>
+                  <span aria-hidden="true">📱</span>
+                  <a href="https://github.com/yan-xiaoo/XJTUToolBox" rel="noopener noreferrer">XJTUToolBox</a>
+                  <span class="metric">209★ / 18 forks</span>
+                </h3>
+                <p class="meta" data-i18n="xjtuRole">Project Collaborator (Maintenance, Review &amp; PR Merge) · Python / PyQt5 · Cross-platform Desktop App</p>
+              </div>
+              <p class="date" data-i18n="xjtuDate">Jan 2026 — Present</p>
+            </div>
+            <p class="prose compact" data-i18n="xjtuSummary">Cross-platform desktop app for campus information and multi-model chat. Personally authored 8 merged PRs as a project collaborator (maintenance, review & merge)—not Maintainer.</p>
+            <ul class="tags">
+              <li data-i18n="xjtuTag1">Model APIs</li>
+              <li data-i18n="xjtuTag2">Campus Data</li>
+              <li data-i18n="xjtuTag3">Cross-platform Builds</li>
+            </ul>
+            <ul class="bullets">
+              <li data-i18n-html="xjtuB1"><strong>Model APIs and campus data:</strong> Built the "问舟" multi-session assistant with adapters for OpenAI, Anthropic, Gemini, Ollama, and compatible endpoints plus Markdown and code rendering. Replaced hard-coded notices with declarative HTML, XPath, RSS, and JSON sources; a failed source does not stop the others.</li>
+              <li data-i18n-html="xjtuB2"><strong>Cross-platform delivery and testing:</strong> Maintained multi-architecture Windows, macOS, and Linux builds and AUR releases, fixing Linux single-instance and data-path issues. Organized regression tests by domain and generated shards and regression inventories from per-file metadata.</li>
+              <li data-i18n-html="xjtuB3"><strong>Maintenance and code review:</strong> Reviewed campus-feature changes and followed fixes for account-switch data leakage, student-profile and fitness-login behavior, empty and zero-value parsing, transaction pagination, and stale asynchronous results.</li>
+            </ul>
+          </article>
+        </section>
+
+        <section class="section" id="awards" data-section="awards">
+          <h2><span aria-hidden="true">🏆</span> <span data-i18n="awardsTitle">Awards</span></h2>
+          <ul class="awards-list">
+            <li><span class="award-ico" aria-hidden="true">🥇</span><span class="award-name" data-i18n="a1n">National Olympiad in Informatics in Provinces (NOIP 2021)</span><span class="award-result" data-i18n="a1r">First Prize · Dec 2021</span></li>
+            <li><span class="award-ico" aria-hidden="true">🥇</span><span class="award-name" data-i18n="a2n">National Olympiad in Informatics in Provinces (NOIP 2022)</span><span class="award-result" data-i18n="a2r">First Prize · Nov 2022</span></li>
+            <li><span class="award-ico" aria-hidden="true">🥉</span><span class="award-name" data-i18n="a3n">ICPC Nanjing Regional 2024</span><span class="award-result" data-i18n="a3r">Bronze Medal · Nov 2024</span></li>
+            <li><span class="award-ico" aria-hidden="true">🥈</span><span class="award-name" data-i18n="a4n">China Collegiate Programming Contest (CCPC), Zhengzhou 2024</span><span class="award-result" data-i18n="a4r">Silver Medal · Nov 2024</span></li>
+            <li><span class="award-ico" aria-hidden="true">🥈</span><span class="award-name" data-i18n="a5n">ICPC China Hubei (Wuhan) Invitational 2025</span><span class="award-result" data-i18n="a5r">Silver Medal · Apr 2025</span></li>
+            <li><span class="award-ico" aria-hidden="true">🥈</span><span class="award-name" data-i18n="a6n">CCF Collegiate Computer Systems &amp; Programming Contest (CCSP 2025)</span><span class="award-result" data-i18n="a6r">Silver Medal · Oct 2025</span></li>
+            <li><span class="award-ico" aria-hidden="true">🥈</span><span class="award-name" data-i18n="a7n">ICPC Wuhan Regional 2025</span><span class="award-result" data-i18n="a7r">Silver Medal · Nov 2025</span></li>
+            <li><span class="award-ico" aria-hidden="true">🥈</span><span class="award-name" data-i18n="a8n">ICPC Shanghai Regional 2025</span><span class="award-result" data-i18n="a8r">Silver Medal · Nov 2025</span></li>
+            <li><span class="award-ico" aria-hidden="true">🥈</span><span class="award-name" data-i18n="a9n">China Collegiate Programming Contest (CCPC), Chongqing 2025</span><span class="award-result" data-i18n="a9r">Silver Medal · Nov 2025</span></li>
+            <li><span class="award-ico" aria-hidden="true">🥇</span><span class="award-name" data-i18n="a10n">Baidu Star Programming Contest Finals 2025</span><span class="award-result" data-i18n="a10r">Gold Award · Dec 2025</span></li>
+            <li><span class="award-ico" aria-hidden="true">🥇</span><span class="award-name" data-i18n="a11n">Group Programming Ladder Tournament (GPLT) 2026</span><span class="award-result" data-i18n="a11r">Individual First Prize · May 2026</span></li>
+            <li><span class="award-ico" aria-hidden="true">🧮</span><span class="award-name" data-i18n="a12n">Ascend AI Operator Challenge, 2nd Annual Championship</span><span class="award-result" data-i18n="a12r">13th Place · May 2026</span></li>
+            <li><span class="award-ico" aria-hidden="true">🥇</span><span class="award-name" data-i18n="a13n">Lanqiao Cup National Finals · C/C++ University Group A</span><span class="award-result" data-i18n="a13r">First Prize · Jun 2026</span></li>
+            <li><span class="award-ico" aria-hidden="true">👑</span><span class="award-name" data-i18n="a14n">Chuanzhi Cup National Programming Challenge · Group A</span><span class="award-result" data-i18n="a14r">Champion · Jun 2026</span></li>
+          </ul>
+        </section>
+
+        <section class="section" id="links" data-section="links">
+          <h2><span aria-hidden="true">🔗</span> <span data-i18n="linksTitle">Links</span></h2>
+                              <ul class="link-list">
+            <li>
+              <span class="link-label"><span aria-hidden="true">💻</span> GitHub</span>
+              <a href="https://github.com/JimmyWang0417" rel="noopener noreferrer">JimmyWang0417</a>
+            </li>
+            <li>
+              <span class="link-label"><span aria-hidden="true">✉️</span> <span data-i18n="emailLabel">Email</span></span>
+              <a href="mailto:jimmywang0417@gmail.com" data-i18n="emailLabel">Email</a>
+            </li>
+            <li>
+              <span class="link-label"><span aria-hidden="true">📝</span> <span data-i18n="blogLabel">Blog</span></span>
+              <a href="https://www.cnblogs.com/wangjunrui" rel="noopener noreferrer" data-i18n="blogLabel">Blog</a>
+            </li>
+          </ul>
+        </section>
+      </main>
+
+                        <footer class="site-footer">
+        <p>
+          <span data-i18n="footerName">Junrui Wang</span>
+          ·
+          <a href="mailto:jimmywang0417@gmail.com" data-i18n="emailLabel">Email</a>
+          ·
+          <a href="https://github.com/JimmyWang0417" rel="noopener noreferrer">GitHub</a>
+          ·
+          <a href="https://www.cnblogs.com/wangjunrui" rel="noopener noreferrer" data-i18n="blogLabel">Blog</a>
+        </p>
+      </footer>
+    </div>
+  </div>
 
   <script src="js/i18n.js"></script>
   <script src="js/main.js"></script>
