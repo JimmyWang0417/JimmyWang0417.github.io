@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Junrui Wang · 王君睿</title>
+  <title>Junrui Wang · 王坛睿</title>
   <meta name="description" content="Junrui Wang — undergraduate in Software Engineering at Xi'an Jiaotong University. AI Infra, LLM infrastructure, and open-source contributions.">
   <meta name="author" content="Junrui Wang">
   <link rel="canonical" href="https://jimmywang0417.github.io/">
@@ -15,29 +15,38 @@
 <body>
   <a class="skip-link" href="#main" data-i18n="skip">Skip to content</a>
 
-  <header class="site-header" id="top">
-    <div class="header-inner">
-      <a class="brand" href="#about" aria-label="Junrui Wang">
-        <span class="mark" aria-hidden="true">JW</span>
-        <span class="brand-name" data-i18n="brandName">Junrui Wang</span>
-      </a>
-      <nav class="nav" aria-label="Primary">
-        <a href="#about" data-i18n="navAbout">About</a>
-        <a href="#education" data-i18n="navEducation">Education</a>
-        <a href="#experience" data-i18n="navExperience">Experience</a>
-        <a href="#projects" data-i18n="navProjects">Projects</a>
-        <a href="#awards" data-i18n="navAwards">Awards</a>
-        <a href="#links" data-i18n="navLinks">Links</a>
-      </nav>
-      <div class="lang-switch" role="group" aria-label="Language">
-        <button type="button" class="lang-btn is-active" data-lang="en" aria-pressed="true">EN</button>
-        <span class="lang-sep" aria-hidden="true">|</span>
-        <button type="button" class="lang-btn" data-lang="zh" aria-pressed="false">中文</button>
+  <div class="layout">
+    <aside class="sidebar" aria-label="Site">
+      <div class="sidebar-sticky">
+        <a class="brand" href="#about" aria-label="Junrui Wang">
+          <span class="mark" aria-hidden="true">JW</span>
+          <span class="brand-name" data-i18n="brandName">Junrui Wang</span>
+        </a>
+        <p class="sidebar-lede" data-i18n="sidebarLede">Software Engineering · XJTU · Jun 2028</p>
+        <nav class="nav" aria-label="Primary">
+          <a href="#about" data-i18n="navAbout">About</a>
+          <a href="#education" data-i18n="navEducation">Education</a>
+          <a href="#experience" data-i18n="navExperience">Experience</a>
+          <a href="#projects" data-i18n="navProjects">Projects</a>
+          <a href="#awards" data-i18n="navAwards">Awards</a>
+          <a href="#links" data-i18n="navLinks">Links</a>
+        </nav>
+        <div class="lang-switch" role="group" aria-label="Language">
+          <button type="button" class="lang-btn is-active" data-lang="en" aria-pressed="true">EN</button>
+          <span class="lang-sep" aria-hidden="true">|</span>
+          <button type="button" class="lang-btn" data-lang="zh" aria-pressed="false">中文</button>
+        </div>
+        <ul class="sidebar-contact" aria-label="Contact">
+          <li><a href="mailto:jimmywang0417@gmail.com" data-i18n="emailLabel">Email</a></li>
+          <li><a href="https://github.com/JimmyWang0417" rel="noopener noreferrer">GitHub</a></li>
+          <li><a href="https://orcid.org/0009-0001-0045-8623" rel="noopener noreferrer">ORCID</a></li>
+          <li><a href="https://www.cnblogs.com/wangjunrui" rel="noopener noreferrer" data-i18n="blogLabel">Blog</a></li>
+        </ul>
       </div>
-    </div>
-  </header>
+    </aside>
 
-  <main id="main" class="page">
+    <div class="main-column">
+      <main id="main" class="page">
     <section class="section hero" id="about" data-section="about">
       <p class="eyebrow" data-i18n="aboutEyebrow">About</p>
       <h1 class="display-name" data-i18n="displayName">Junrui Wang</h1>
@@ -198,7 +207,7 @@
     </section>
   </main>
 
-  <footer class="site-footer">
+      <footer class="site-footer">
     <p>
       <span data-i18n="footerName">Junrui Wang</span>
       ·
@@ -207,6 +216,8 @@
       <a href="mailto:jimmywang0417@gmail.com">jimmywang0417@gmail.com</a>
     </p>
   </footer>
+    </div>
+  </div>
 
   <script src="js/i18n.js"></script>
   <script src="js/main.js"></script>

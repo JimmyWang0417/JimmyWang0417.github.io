@@ -54,7 +54,7 @@
     window.setTimeout(function () {
       applyLang(lang);
       document.body.classList.remove("is-fading");
-    }, 120);
+    }, 140);
   }
 
   function setupLangSwitch() {
@@ -87,7 +87,7 @@
           });
         });
       },
-      { rootMargin: "-35% 0px -55% 0px", threshold: 0.01 }
+      { rootMargin: "-28% 0px -58% 0px", threshold: 0.01 }
     );
 
     sections.forEach(function (section) {

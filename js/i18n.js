@@ -2,6 +2,7 @@ window.SITE_I18N = {
   en: {
     skip: "Skip to content",
     brandName: "Junrui Wang",
+    sidebarLede: "Software Engineering · XJTU · Jun 2028",
     navAbout: "About",
     navEducation: "Education",
     navExperience: "Experience",
@@ -117,6 +118,7 @@ window.SITE_I18N = {
   zh: {
     skip: "跳到正文",
     brandName: "王君睿",
+    sidebarLede: "软件工程 · 西安交大 · 2028",
     navAbout: "关于",
     navEducation: "教育",
     navExperience: "经历",

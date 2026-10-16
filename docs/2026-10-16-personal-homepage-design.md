@@ -1,4 +1,4 @@
-# Personal Homepage Design â€” 2026-10-16
+# Personal Homepage Design — 2026-10-16
 
 Approved plan for https://jimmywang0417.github.io/
 
@@ -19,7 +19,8 @@ Deployment follows the team homepage (`clyzcst.github.io`): **`master` holds sou
 
 ## Chrome
 
-- Sticky header: geometric initials mark Â· name Â· section anchors Â· EN | ä¸­æ–‡
+- Desktop: sticky left sidebar (mark · name · short lede · section nav · EN | ?? · contact) + right main column
+- Mobile: stacked single column
 - Default language: English
 - Persist choice in `localStorage`; honor `?lang=zh` / `?lang=en`
 - No face / photo / avatar
@@ -28,8 +29,8 @@ Deployment follows the team homepage (`clyzcst.github.io`): **`master` holds sou
 
 - Light cool-gray paper background, near-black text
 - Single ink-blue / slate-teal accent (`#345A7C`)
-- Typography: Source Serif 4 (display) + Source Sans 3 (body) via Google Fonts â€” not Inter / Roboto / Arial / system stacks
-- Single column, restrained motion (language fade, active-section underline)
+- Typography: Source Serif 4 (display) + Source Sans 3 (body) via Google Fonts — not Inter / Roboto / Arial / system stacks
+- Multi-column shell (~`min(76–80rem, 92vw)`), restrained motion (language fade, active-nav rail)
 - Explicitly avoid purple gradients, cream+serif terracotta, and dark-mode-first layouts
 
 ## Content rules
@@ -38,10 +39,10 @@ Deployment follows the team homepage (`clyzcst.github.io`): **`master` holds sou
 - Mirror resume claims; no invented publications
 - Label GitHub stars/forks as project-level metrics
 - Prefer internship-variant open-source bullets on the homepage (merged Mooncake / Axolotl / Haystack); do not present unmerged PRs as adopted
-- XJTUToolBox role: Project Collaborator (maintenance, review & PR merge) â€” not Maintainer
+- XJTUToolBox role: Project Collaborator (maintenance, review & PR merge) — not Maintainer
 - Public email on site; internship evaluation included because it appears on the public resume
 - Links: GitHub, ORCID, email, blog; ORCID also in footer
-- Content column: ~60rem (`--max`) so the page uses more of the viewport while staying single-column
+- Content shell: sidebar + main spanning ~`min(76–80rem, 92vw)` on large screens
 
 ## Password generator (hosted, not featured)
 
